@@ -3,23 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>RACCommand</string>
+	<string>zs</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-        return [RACSignal createSignal:^RACDisposable *(id&lt;RACSubscriber&gt; subscriber) {
-            return nil;
-        }];
-    }];</string>
+	<string>/**
+ *  &lt;#description#&gt;
+ *
+ *  @param &lt;#param#&gt;    &lt;#description#&gt;
+ *  @param &lt;#param#&gt;    &lt;#description#&gt;
+ */</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4E315508-64DF-4357-B927-C9D1982CF955</string>
+	<string>A54F2419-A55C-4FA5-84C3-BF1A517A269C</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Code RACCommand</string>
+	<string>My Code 注释 OC</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
