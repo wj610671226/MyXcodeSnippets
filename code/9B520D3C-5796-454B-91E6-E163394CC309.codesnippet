@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>weak</string>
+	<string>strongSelf</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, weak) &lt;#type#&gt; * &lt;#value#&gt;;</string>
+	<string>__strong typeof(self) strongSelf = self;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>5FD541EA-5094-4818-87D0-61E5E4183E10</string>
+	<string>9B520D3C-5796-454B-91E6-E163394CC309</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Code Weak OC</string>
+	<string>My Code strongSelf OC</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
