@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>rxcollection</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let dataSource = RxCollectionViewSectionedReloadDataSource&lt;&lt;#PopViewSectionModel#&gt;&gt;(configureCell: { [weak self] (_, collectionView, indexPath, model) -&gt; UICollectionViewCell in
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.CellID, for: indexPath)
+    return cell
+            }, configureSupplementaryView: { [weak self] (_, collectionView, kind, indexPath) -&gt; UICollectionReusableView in
+                let sectionView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: self.KindID, for: indexPath)
+                return sectionView
+        })
+        
+&lt;#dataArray#&gt;.bind(to: &lt;#popCollectionView#&gt;.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
+        
+        // 点击事件
+&lt;#popCollectionView#&gt;.rx.itemSelected.map {[weak self] (indexPath) in
+            return self!.dataArray.value.first!.items[indexPath.row]
+            }.subscribe(onNext: { [weak self] (model) in
+               
+            }).disposed(by: rx.disposeBag)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BA73FE78-8C54-4590-9AC1-3A8AC8D8947B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My Code RxDataSource - Section - Collection</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

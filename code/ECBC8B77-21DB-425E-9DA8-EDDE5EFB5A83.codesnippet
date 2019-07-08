@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>rxtable</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let data = Observable.just([])
+&lt;#tableView#&gt;.register(UITableViewCell.self, forCellReuseIdentifier: &lt;#CellID#&gt;)
+        seetingData.bind(to: &lt;#tableView#&gt;.rx.items(cellIdentifier: &lt;#CellID#&gt;)) { index, model, cell in
+ 
+        }.disposed(by: rx.disposeBag)
+
+&lt;#tableView#&gt;.rx.modelSelected(&lt;#model#&gt;.self).subscribe(onNext: { (value) in
+      
+        }).disposed(by: rx.disposeBag)
+        
+        &lt;#tableView#&gt;.rx.setDelegate(self).disposed(by: rx.disposeBag)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>ECBC8B77-21DB-425E-9DA8-EDDE5EFB5A83</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My Code RxDataSource - base - TableView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>rxtable</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>&lt;#tableView#&gt;.register(UINib(nibName: "RecycleTableViewCell", bundle: nil), forCellReuseIdentifier: CellID)
+        
+let dataSource = RxTableViewSectionedReloadDataSource&lt;&lt;#RecycleSectionModel#&gt;&gt;(configureCell: { [weak self] (_, tableView, indexPath, model) -&gt; UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: self!.CellID)!
+            
+            return cell
+        }, titleForHeaderInSection: { (model, index) -&gt; String? in
+            return model[index].header
+        }, canEditRowAtIndexPath: { (model, indexPath) -&gt; Bool in
+            return true
+        })
+
+&lt;#dataArray#&gt;.bind(to: &lt;#tableView#&gt;.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
+&lt;#tableView#&gt;.rx.modelSelected(RecycleModel.self).subscribe(onNext: { [weak self](model) in
+            print("model = \(model)")
+        }).disposed(by: rx.disposeBag)
+        
+        
+&lt;#tableView#&gt;.rx.modelDeselected(RecycleModel.self).subscribe(onNext: {[weak self] (model) in
+            
+        }).disposed(by: rx.disposeBag)
+        
+&lt;#tableView#&gt;.rx.setDelegate(self).disposed(by: rx.disposeBag)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9981DE24-3B39-4C40-9818-D3FF8271576E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My Code RxDataSource - section - TableView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
